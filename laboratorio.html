@@ -4,7 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratório - EEEFM Monsenhor Walfredo Leal</title>
+    <title>Laboratório de Informática - EEFM Monsenhor Walfredo Leal, Pirpirituba, PB</title>
+    <meta name="description"
+        content="Conheça o laboratório de informática da EEFM Monsenhor Walfredo Leal em Pirpirituba, PB, e divirta-se com jogos multiplayer gratuitos para alunos.">
+    <meta name="keywords"
+        content="laboratório informática, jogos multiplayer, escola Pirpirituba, EEFM Monsenhor Walfredo Leal, educação, Paraíba">
+    <meta name="author" content="EEFM Monsenhor Walfredo Leal">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Laboratório de Informática - EEFM Monsenhor Walfredo Leal, Pirpirituba, PB">
+    <meta property="og:description"
+        content="Explore o laboratório de informática da EEFM Monsenhor Walfredo Leal e jogue games multiplayer gratuitos com colegas!">
+    <meta property="og:image" content="https://ronyabreu.github.io/Walfredo-Website/logo.png">
+    <meta property="og:url" content="https://ronyabreu.github.io/Walfredo-Website/laboratorio.html">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Laboratório de Informática - EEFM Monsenhor Walfredo Leal, Pirpirituba, PB">
+    <meta name="twitter:description"
+        content="Explore o laboratório de informática da EEFM Monsenhor Walfredo Leal e jogue games multiplayer gratuitos com colegas!">
+    <meta name="twitter:image" content="https://ronyabreu.github.io/Walfredo-Website/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="./logo.png" type="image/png">
     <style>
@@ -60,6 +78,18 @@
             cursor: pointer;
         }
 
+        .game-card {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(147, 51, 234, 0.1));
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
         @media (max-width: 640px) {
             .nav-menu {
                 display: none;
@@ -92,11 +122,11 @@
     <!-- Navbar -->
     <nav class="gradient-bg text-white p-4 sticky top-0 z-10 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">EEEFM Monsenhor Walfredo Leal</h1>
+            <h1 class="text-2xl font-bold">EEFM Monsenhor Walfredo Leal</h1>
             <img src="https://img.icons8.com/ios-filled/50/ffffff/menu--v1.png" width="30" alt="Menu Hamburguer"
                 class="hamburger hover-scale">
             <ul class="nav-menu flex space-x-6">
-                <li><a href="index.html" class="hover:underline">Sobre</a></li>
+                <li><a href="./" class="hover:underline">Sobre</a></li>
                 <li><a href="documentos.html" class="hover:underline">Documentos</a></li>
                 <li><a href="laboratorio.html" class="hover:underline">Laboratório</a></li>
             </ul>
@@ -113,24 +143,46 @@
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="p-6 bg-indigo-100 rounded-lg hover-scale">
-                    <img src="https://img.icons8.com/color/48/000000/code.png" alt="Ícone Programação"
-                        class="mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">Em breve...</h3>
-                    <p class="text-gray-600"></p>
-                </div>
-                <div class="p-6 bg-purple-100 rounded-lg hover-scale">
-                    <img src="https://img.icons8.com/color/48/000000/design.png" alt="Ícone Design"
+                    <img src="https://img.icons8.com/color/48/000000/code.png" alt="Ícone de Programação"
                         class="mx-auto mb-4">
                     <h3 class="text-xl font-semibold">Em breve...</h3>
                     <p class="text-gray-600"></p>
                 </div>
             </div>
         </section>
+
+        <!-- Seção de Jogos Multiplayer -->
+        <section class="container mx-auto py-10">
+            <h2 class="text-3xl font-bold text-indigo-600 mb-6 text-center">Melhores Jogos Multiplayer de Navegador</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8 text-center">
+                Explore nossa seleção de jogos gratuitos que você pode jogar com amigos diretamente no navegador.
+                Perfeitos para diversão e colaboração!
+            </p>
+            <div id="games-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </section>
     </main>
 
     <footer class="gradient-bg text-white text-center p-4">
-        <p>© 2025 EEEFM Monsenhor Walfredo Leal. Todos os direitos reservados.</p>
+        <p>© 2025 EEFM Monsenhor Walfredo Leal. Todos os direitos reservados.</p>
     </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Laboratório de Informática - EEFM Monsenhor Walfredo Leal",
+        "description": "Conheça o laboratório de informática da EEFM Monsenhor Walfredo Leal em Pirpirituba, PB, e divirta-se com jogos multiplayer gratuitos para alunos.",
+        "url": "https://ronyabreu.github.io/Walfredo-Website/laboratorio.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "EEFM Monsenhor Walfredo Leal",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://ronyabreu.github.io/Walfredo-Website/logo.png"
+            }
+        }
+    }
+    </script>
 
     <script>
         // Animação suave ao clicar nos links do menu
@@ -149,6 +201,25 @@
             navMenu.classList.toggle('active');
             navMenu.classList.toggle('hidden');
         });
+
+        // Carregar e renderizar jogos de laboratorio.json
+        fetch('./laboratorio.json')
+            .then(response => response.json())
+            .then(data => {
+                const grid = document.getElementById('games-grid');
+                data.forEach(game => {
+                    const card = document.createElement('div');
+                    card.className = 'game-card p-6';
+                    card.innerHTML = `
+                        <img src="${game.imageUrl}" alt="Ícone de ${game.title}" class="mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-indigo-600">${game.title}</h3>
+                        <p class="text-gray-600 mb-4">${game.description}</p>
+                        <a href="${game.gameUrl}" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700">Jogar Agora</a>
+                    `;
+                    grid.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Erro ao carregar laboratorio.json:', error));
     </script>
 </body>
 

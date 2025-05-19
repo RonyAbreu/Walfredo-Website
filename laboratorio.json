@@ -1,0 +1,44 @@
+[
+  {
+    "imageUrl": "https://img.icons8.com/color/48/000000/paint-brush.png",
+    "title": "Gartic.io",
+    "description": "Desenhe e adivinhe palavras com amigos neste jogo multiplayer divertido! Crie salas personalizadas e mostre sua criatividade no laboratório.",
+    "gameUrl": "https://gartic.io"
+  },
+  {
+    "imageUrl": "https://img.icons8.com/color/48/000000/snake.png",
+    "title": "Slither.io",
+    "description": "Controle uma cobra e coma pontos para crescer, mas evite colidir com outras cobras. Compita com amigos em um servidor online!",
+    "gameUrl": "https://slither.io"
+  },
+  {
+    "imageUrl": "https://img.icons8.com/color/48/000000/abc.png",
+    "title": "Bloob.io: Wordrace",
+    "description": "Encontre o maior número de palavras em um tabuleiro contra o relógio. Perfeito para praticar vocabulário e competir com colegas!",
+    "gameUrl": "https://bloob.io/wordrace"
+  },
+  {
+    "imageUrl": "https://img.icons8.com/color/48/000000/skateboard.png",
+    "title": "Subway Surfers",
+    "description": "Corra pelos trilhos do metrô como Jake, desviando de trens e obstáculos enquanto coleta moedas. Um jogo de corrida infinita cheio de adrenalina e cores vibrantes!",
+    "gameUrl": "https://poki.com/en/g/subway-surfers"
+  },
+  {
+    "imageUrl": "https://img.icons8.com/color/48/000000/treasure-chest.png",
+    "title": "Temple Run",
+    "description": "Fuja de macacos demoníacos em uma aventura épica! Corra, pule e deslize por templos antigos, coletando moedas e evitando armadilhas.",
+    "gameUrl": "https://poki.com/en/g/temple-run-2"
+  },
+  {
+    "imageUrl": "https://img.icons8.com/color/48/000000/shooting.png",
+    "title": "Kirka.io",
+    "description": "Entre em batalhas de tiro em primeira pessoa com gráficos estilo Minecraft. Jogue com amigos em partidas multiplayer rápidas e estratégicas!",
+    "gameUrl": "https://kirka.io"
+  },
+  {
+    "imageUrl": "https://img.icons8.com/color/48/000000/home.png",
+    "title": "1v1.lol",
+    "description": "Desafie amigos em duelos 1 contra 1 ou construa fortalezas em um jogo de tiro e construção. Perfeito para competições amigáveis!",
+    "gameUrl": "https://1v1.lol"
+  }
+]
