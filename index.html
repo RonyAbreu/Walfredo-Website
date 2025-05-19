@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Monsenhor Walfredo Leal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="./logo.png" type="image/png">
+    <style>
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5, #9333ea);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+
+        .instagram-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(147, 51, 234, 0.1));
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .instagram-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .instagram-text {
+            color: #6b21a8;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .instagram-section:hover .instagram-text {
+            color: #4f46e5;
+        }
+
+        /* Estilos para a navbar responsiva */
+        .nav-menu {
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu.hidden {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 640px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, #4f46e5, #9333ea);
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 0.5rem 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .instagram-section {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .instagram-text {
+                font-size: 1rem;
+            }
+
+            .title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="gradient-bg text-white p-4 sticky top-0 z-10 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold title">EEFM Monsenhor Walfredo Leal</h1>
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/menu--v1.png" width="30" alt="Menu Hamburguer"
+                class="hamburger hover-scale">
+            <ul class="nav-menu flex space-x-6">
+                <li><a href="index.html" class="hover:underline">Sobre</a></li>
+                <li><a href="documentos.html" class="hover:underline">Documentos</a></li>
+                <li><a href="laboratorio.html" class="hover:underline">Laboratório</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Página Sobre -->
+    <main>
+        <section class="container mx-auto py-10 text-center">
+            <h2 class="text-4xl font-bold text-indigo-600 mb-6">Bem-vindo à Nossa Escola!</h2>
+            <img src="./logo.png" alt="Foto da Escola" width="200" height="200"
+                class="mx-auto mb-6 rounded-lg shadow-lg hover-scale">
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+                A Escola Estadual de Ensino Fundamental e Médio Monsenhor Walfredo Leal, localizada em Pirpirituba, PB,
+                é um espaço de aprendizado vibrante e acolhedor. Nossa missão é formar cidadãos críticos e criativos,
+                oferecendo educação de qualidade com foco no desenvolvimento integral dos alunos.
+            </p>
+            <div class="mt-4 instagram-section">
+                <a href="https://www.instagram.com/walfredo_leal/" target="_blank" rel="noopener noreferrer">
+                    <p class="instagram-text">Acesse nosso Instagram para acompanhar as novidades
+                        <p />
+
+                        <img src="https://img.icons8.com/color/48/000000/instagram-new.png" width="30"
+                            alt="Ícone Instagram" class="hover-scale">
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção de Destaques -->
+        <section class="bg-white py-10">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center p-6 bg-indigo-100 rounded-lg hover-scale">
+                    <img src="https://img.icons8.com/color/48/000000/book.png" width="50" alt="Ícone Livros"
+                        class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Ensino de Qualidade</h3>
+                    <p class="text-gray-600">Aulas dinâmicas com professores dedicados.</p>
+                </div>
+                <div class="text-center p-6 bg-purple-100 rounded-lg hover-scale">
+                    <img src="https://img.icons8.com/color/48/000000/sports.png" width="50" alt="Ícone Esportes"
+                        class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Atividades Esportivas</h3>
+                    <p class="text-gray-600">Projetos que promovem saúde e teamwork.</p>
+                </div>
+                <div class="text-center p-6 bg-blue-100 rounded-lg hover-scale">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1987/1987925.png" width="50" alt="Ícone Arte"
+                        class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Arte e Cultura</h3>
+                    <p class="text-gray-600">Eventos culturais para todos os alunos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gradient-bg text-white text-center p-4">
+        <p>© 2025 EEFM Monsenhor Walfredo Leal. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Animação suave ao clicar nos links do menu
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                setTimeout(() => { window.location.href = href; }, 300);
+            });
+        });
+
+        // Toggle do menu hamburguer
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
