@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentos - EEFM Monsenhor Walfredo Leal</title>
+    <title>Documentos - EEEFM Monsenhor Walfredo Leal</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="./logo.png" type="image/png">
     <style>
@@ -92,7 +92,7 @@
     <!-- Navbar -->
     <nav class="gradient-bg text-white p-4 sticky top-0 z-10 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">EEFM Monsenhor Walfredo Leal</h1>
+            <h1 class="text-2xl font-bold">EEEFM Monsenhor Walfredo Leal</h1>
             <img src="https://img.icons8.com/ios-filled/50/ffffff/menu--v1.png" width="30" alt="Menu Hamburguer"
                 class="hamburger hover-scale">
             <ul class="nav-menu flex space-x-6">
@@ -111,37 +111,12 @@
                 Aqui você encontra as provas e outros documentos importantes para download. Fique atento às datas e
                 organize seus estudos!
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <a href="prova_matematica_2025.pdf" class="block p-6 bg-indigo-100 rounded-lg hover-scale">
-                    <img src="https://img.icons8.com/color/48/000000/math.png" alt="Ícone Matemática"
-                        class="mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">Prova de Matemática</h3>
-                    <p class="text-gray-600">1º Bimestre - 2025</p>
-                </a>
-                <a href="prova_portugues_2025.pdf" class="block p-6 bg-purple-100 rounded-lg hover-scale">
-                    <img src="https://img.icons8.com/color/48/000000/book.png" alt="Ícone Português"
-                        class="mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">Prova de Português</h3>
-                    <p class="text-gray-600">1º Bimestre - 2025</p>
-                </a>
-                <a href="prova_ciencias_2025.pdf" class="block p-6 bg-blue-100 rounded-lg hover-scale">
-                    <img src="https://img.icons8.com/color/48/000000/microscope.png" alt="Ícone Ciências"
-                        class="mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">Prova de Ciências</h3>
-                    <p class="text-gray-600">1º Bimestre - 2025</p>
-                </a>
-                <a href="calendario_academico_2025.pdf" class="block p-6 bg-green-100 rounded-lg hover-scale">
-                    <img src="https://img.icons8.com/color/48/000000/calendar.png" alt="Ícone Calendário"
-                        class="mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">Calendário Acadêmico</h3>
-                    <p class="text-gray-600">Ano Letivo 2025</p>
-                </a>
-            </div>
+            <div id="documents-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         </section>
     </main>
 
     <footer class="gradient-bg text-white text-center p-4">
-        <p>© 2025 EEFM Monsenhor Walfredo Leal. Todos os direitos reservados.</p>
+        <p>© 2025 EEEFM Monsenhor Walfredo Leal. Todos os direitos reservados.</p>
     </footer>
 
     <script>
@@ -161,6 +136,25 @@
             navMenu.classList.toggle('active');
             navMenu.classList.toggle('hidden');
         });
+
+        // Carregar e renderizar cards de documentos.json
+        fetch('./documentos.json')
+            .then(response => response.json())
+            .then(data => {
+                const grid = document.getElementById('documents-grid');
+                data.forEach(doc => {
+                    const card = document.createElement('a');
+                    card.href = doc.docLink;
+                    card.className = `block p-6 ${doc.bgColor} rounded-lg hover-scale`;
+                    card.innerHTML = `
+                        <img src="${doc.imageUrl}" alt="Ícone ${doc.title}" class="mx-auto mb-4">
+                        <h3 class="text-xl font-semibold">${doc.title}</h3>
+                        <p class="text-gray-600">${doc.subtitle}</p>
+                    `;
+                    grid.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Erro ao carregar documentos.json:', error));
     </script>
 </body>
 
