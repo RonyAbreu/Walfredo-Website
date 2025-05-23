@@ -1,5 +1,11 @@
 [
   {
+    "imageUrl": "https://img.icons8.com/color/48/000000/block.png",
+    "title": "Miniblox",
+    "description": "Explore um mundo voxel inspirado em Minecraft com modos de sobrevivência e criativo. Construa, lute e participe de minijogos como EggWars e Skywars com amigos!",
+    "gameUrl": "https://miniblox.io"
+  },
+  {
     "imageUrl": "https://img.icons8.com/color/48/000000/paint-brush.png",
     "title": "Gartic.io",
     "description": "Desenhe e adivinhe palavras com amigos neste jogo multiplayer divertido! Crie salas personalizadas e mostre sua criatividade no laboratório.",
